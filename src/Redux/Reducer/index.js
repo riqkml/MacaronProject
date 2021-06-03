@@ -39,7 +39,8 @@ const data = {
                 price: 125000,
 
             }
-        ]
+        ],
+        cart: []
     }
 };
 

@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View, Image, ScrollView } from 'react-native'
+import { connect } from 'react-redux'
 import CBottomTab from '../../Components/CBottomTab'
 import CPlainHeader from '../../Components/CPlainHeader'
 import { colors, Height, Width } from '../../Helper'
 
-export default class DetailProductScreen extends Component {
+class DetailProductScreen extends Component {
     render() {
         const { navigation } = this.props
         const { data } = this.props.route.params
@@ -36,3 +37,5 @@ export default class DetailProductScreen extends Component {
 }
 
 const styles = StyleSheet.create({})
+
+export default connect()(DetailProductScreen)
