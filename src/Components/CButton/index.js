@@ -4,9 +4,9 @@ import { colors } from '../../Helper'
 
 export default class CButton extends Component {
     render() {
-        const { onClick, label, color } = this.props
+        const { onClick, label, color, isHide } = this.props
         return (
-            <TouchableOpacity onPress={onClick} style={styles.Button(color)}>
+            <TouchableOpacity onPress={isHide ? null : onClick} style={styles.Button(color, isHide)}>
                 <Text style={styles.Title(color)}>{label}</Text>
             </TouchableOpacity>
         )
@@ -14,8 +14,8 @@ export default class CButton extends Component {
 }
 
 const styles = StyleSheet.create({
-    Button: (color) => ({
-        backgroundColor: color ? color : 'white',
+    Button: (color, isHide) => ({
+        backgroundColor: color ? isHide ? 'gray' : color : 'white',
         padding: 7,
         borderRadius: 5,
         alignItems: 'center',

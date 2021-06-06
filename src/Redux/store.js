@@ -7,7 +7,7 @@ import reducerApp from './index';
 const persistConfig = {
     key: 'root',
     storage: AsyncStorage,
-    blacklist: ['lessonReducer'],
+    blacklist: ['mainReducer'],
     whitelist: [],
 };
 

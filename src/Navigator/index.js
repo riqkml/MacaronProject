@@ -8,6 +8,11 @@ import TransactionScreen from '../Screens/TransactionScreen';
 import ProfileScreen from '../Screens/ProfileScreen';
 import { colors, Colors } from '../Helper';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import CartScreen from '../Screens/CartScreen';
+import ShippingScreen from '../Screens/ShippingScreen';
+import PaymentScreen from '../Screens/PaymentScreen';
+import LoginScreen from '../Screens/LoginScreen';
+import UploadPhotoScreen from '../Screens/UploadPhotoScreen';
 
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -35,24 +40,13 @@ export default class Router extends Component {
                     }}
                 />
                 <Tab.Screen
-                    name="Chat"
-                    component={TransactionScreen}
+                    name="Payment"
+                    component={PaymentScreen}
                     options={{
                         tabBarLabel: 'Transaction',
-                        tabBarColor: '#D02760',
-                        tabBarIcon: ({ color }) => (
-                            <MaterialCommunityIcons name="book" color={color} size={26} />
-                        ),
-                    }}
-                />
-                <Tab.Screen
-                    name="Profile"
-                    component={ProfileScreen}
-                    options={{
-                        tabBarLabel: 'Profile',
                         tabBarColor: '#158041',
                         tabBarIcon: ({ color }) => (
-                            <MaterialCommunityIcons name="account" color={color} size={26} />
+                            <MaterialCommunityIcons name="book" color={color} size={26} />
                         ),
                     }}
                 />
@@ -84,6 +78,41 @@ export default class Router extends Component {
                         options={header}
                     />
 
+                    <Stack.Screen
+                        name="CartScreen"
+                        component={CartScreen}
+                        options={header}
+                    />
+
+                    <Stack.Screen
+                        name="ShippingScreen"
+                        component={ShippingScreen}
+                        options={header}
+                    />
+
+                    <Stack.Screen
+                        name="TransactionScreen"
+                        component={TransactionScreen}
+                        options={header}
+                    />
+
+                    <Stack.Screen
+                        name="LoginScreen"
+                        component={LoginScreen}
+                        options={header}
+                    />
+
+                    <Stack.Screen
+                        name="ProfileScreen"
+                        component={ProfileScreen}
+                        options={header}
+                    />
+
+                    <Stack.Screen
+                        name="UploadPhotoScreen"
+                        component={UploadPhotoScreen}
+                        options={header}
+                    />
                 </Stack.Navigator>
             </>
         );

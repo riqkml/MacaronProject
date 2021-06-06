@@ -2,7 +2,7 @@ const pallete = {
     greenNature: '#158041',
     sky: '#259DCF',
     white: '#ffffff',
-    algaegreen: '#26CC64',
+    algaegreen: '#1AAE9F',
     darkgrey: '#919191',
     lightgrey: '#777777',
     softgrey: '#6C727C',
